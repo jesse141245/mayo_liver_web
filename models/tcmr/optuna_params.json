@@ -1,0 +1,21 @@
+{
+  "xgb_n_estimators": 200,
+  "xgb_max_depth": 3,
+  "xgb_learning_rate": 0.001562942132998527,
+  "xgb_subsample": 0.8361599482742097,
+  "xgb_reg_lambda": 3.047551106799426,
+  "xgb_early_stopping_rounds": 8,
+  "dnn_lr": 0.0037527417021046994,
+  "dnn_l2_regularizer": 5.199002325622204e-06,
+  "dnn_num_neurons": 64,
+  "dnn_epoch": 30,
+  "dnn_dropout_rate": 0.1,
+  "dnn_batch_size": 128,
+  "dnn_early_stopping_rounds": 2,
+  "vae_latent_dim": 8,
+  "vae_hidden_dim": 64,
+  "vae_lr": 0.009095864553456977,
+  "vae_epochs": 150,
+  "vae_early_stopping_rounds": 4,
+  "gmm_n_components": 8
+}

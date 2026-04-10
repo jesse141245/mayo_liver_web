@@ -1,0 +1,287 @@
+/* Data Preview Component Styles - Mayo Clinic Theme */
+
+.data-preview-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.data-preview-empty {
+    text-align: center;
+    padding: 48px;
+    color: var(--text-tertiary);
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+}
+
+/* Summary Stats */
+.data-preview-summary {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 16px;
+}
+
+.summary-stat {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 20px;
+    text-align: center;
+}
+
+.stat-value {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 4px;
+}
+
+.stat-label {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Column Overview */
+.data-preview-columns h3 {
+    margin: 0 0 16px;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.columns-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 12px;
+}
+
+.column-card {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 14px;
+    transition: all 0.2s ease;
+}
+
+.column-card:hover {
+    border-color: var(--border-hover);
+}
+
+.column-card.selected {
+    border-color: var(--primary-color);
+    background: var(--primary-light);
+}
+
+.column-card.target {
+    border-color: var(--success-color);
+    background: #ecfdf5;
+}
+
+.column-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.type-badge {
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    font-weight: 600;
+}
+
+.type-number {
+    background: var(--primary-light);
+    color: var(--primary-color);
+}
+
+.type-string {
+    background: #fef3c7;
+    color: #d97706;
+}
+
+.type-boolean {
+    background: #ede9fe;
+    color: #7c3aed;
+}
+
+.type-date {
+    background: #cffafe;
+    color: #0891b2;
+}
+
+.column-name {
+    font-weight: 500;
+    font-size: 0.875rem;
+    color: var(--text-primary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.column-stats {
+    display: flex;
+    gap: 12px;
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-bottom: 10px;
+}
+
+.column-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.action-btn {
+    flex: 1;
+    padding: 6px 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background: white;
+    color: var(--text-tertiary);
+    font-size: 0.75rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.action-btn:hover {
+    border-color: var(--text-tertiary);
+    color: var(--text-primary);
+}
+
+.action-btn.feature.active {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+}
+
+.action-btn.target.active {
+    background: var(--success-color);
+    border-color: var(--success-color);
+    color: white;
+}
+
+/* Data Table */
+.data-preview-table-container h3 {
+    margin: 0 0 16px;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.table-wrapper {
+    /* overflow-x: auto;  Removed to prevent horizontal scroll if possible, or keep as fallback */
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-color);
+    background: var(--bg-secondary);
+    width: 100%;
+}
+
+.data-preview-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.875rem;
+    table-layout: fixed;
+    /* Enforces strict column widths to fit screen */
+}
+
+.data-preview-table th,
+.data-preview-table td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+    word-wrap: break-word;
+    /* Allow text to wrap */
+    overflow-wrap: break-word;
+}
+
+.data-preview-table th {
+    background: var(--bg-tertiary);
+    font-weight: 600;
+    color: var(--text-primary);
+    cursor: pointer;
+    user-select: none;
+    position: sticky;
+    top: 0;
+}
+
+.data-preview-table th:hover {
+    background: var(--border-color);
+}
+
+.data-preview-table th.sorted {
+    color: var(--primary-color);
+}
+
+.th-content {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.sort-indicator {
+    opacity: 0.7;
+}
+
+.data-preview-table tbody tr:hover {
+    background: var(--bg-tertiary);
+}
+
+.data-preview-table td {
+    color: var(--text-secondary);
+    /* Remove white-space: nowrap to allow wrapping */
+}
+
+.row-number {
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    width: 50px;
+}
+
+.null-value {
+    color: var(--text-muted);
+    font-style: italic;
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 16px;
+}
+
+.pagination-btn {
+    padding: 8px 14px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    background: white;
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.pagination-btn:hover:not(:disabled) {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+}
+
+.pagination-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.pagination-info {
+    padding: 0 16px;
+    color: var(--text-tertiary);
+    font-size: 0.875rem;
+}

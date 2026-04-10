@@ -1,0 +1,306 @@
+/* Preprocessing Component Styles - Mayo Clinic Theme */
+
+.preprocessing-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.preprocessing-empty {
+    text-align: center;
+    padding: 48px;
+    color: var(--text-tertiary);
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+}
+
+.preprocessing-section h3 {
+    margin: 0 0 16px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+/* Global Settings */
+.global-settings-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.setting-group {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 16px;
+}
+
+.setting-group label {
+    display: block;
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.slider-container {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.slider-container input[type="range"] {
+    flex: 1;
+    height: 6px;
+    appearance: none;
+    background: var(--bg-tertiary);
+    border-radius: 3px;
+    outline: none;
+}
+
+.slider-container input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    cursor: pointer;
+}
+
+.slider-value {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    min-width: 70px;
+}
+
+.number-input {
+    width: 100%;
+    padding: 10px 14px;
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    color: var(--text-primary);
+    font-size: 0.9rem;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.number-input:focus {
+    border-color: var(--primary-color);
+}
+
+/* Column Configuration */
+.columns-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.column-config-card {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    transition: all 0.2s ease;
+}
+
+.column-config-card:hover {
+    border-color: var(--border-hover);
+}
+
+.column-config-card.expanded {
+    border-color: var(--primary-color);
+}
+
+.column-config-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 16px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.column-config-header:hover {
+    background: var(--bg-tertiary);
+}
+
+.column-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.type-indicator {
+    width: 26px;
+    height: 26px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    font-weight: 600;
+}
+
+.type-indicator.type-number {
+    background: var(--primary-light);
+    color: var(--primary-color);
+}
+
+.type-indicator.type-string {
+    background: #fef3c7;
+    color: #d97706;
+}
+
+.type-indicator.type-boolean {
+    background: #ede9fe;
+    color: #7c3aed;
+}
+
+.type-indicator.type-date {
+    background: #cffafe;
+    color: #0891b2;
+}
+
+.column-info .column-name {
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.missing-badge {
+    font-size: 0.75rem;
+    padding: 3px 8px;
+    background: #fef2f2;
+    color: var(--error-color);
+    border-radius: 4px;
+}
+
+.column-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.toggle-btn {
+    padding: 6px 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background: white;
+    color: var(--text-tertiary);
+    font-size: 0.75rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.toggle-btn:hover {
+    border-color: var(--text-tertiary);
+    color: var(--text-primary);
+}
+
+.toggle-btn.active {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+}
+
+.toggle-btn.target.active {
+    background: var(--success-color);
+    border-color: var(--success-color);
+}
+
+.expand-icon {
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    margin-left: 8px;
+}
+
+.column-config-body {
+    padding: 0 16px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    border-top: 1px solid var(--border-color);
+    background: var(--bg-tertiary);
+    animation: slideDown 0.2s ease;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.config-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding-top: 12px;
+}
+
+.config-row label {
+    flex: 0 0 120px;
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+}
+
+.config-row select,
+.config-row input[type="text"] {
+    flex: 1;
+    padding: 8px 12px;
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    color: var(--text-primary);
+    font-size: 0.875rem;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.config-row select:focus,
+.config-row input[type="text"]:focus {
+    border-color: var(--primary-color);
+}
+
+/* Action Buttons */
+.preprocessing-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.btn {
+    padding: 12px 24px;
+    border-radius: var(--radius-md);
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-secondary {
+    background: white;
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+}
+
+.btn-secondary:hover {
+    border-color: var(--text-secondary);
+    color: var(--text-primary);
+}
+
+.btn-primary {
+    background: var(--primary-color);
+    border: none;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: var(--primary-hover);
+}

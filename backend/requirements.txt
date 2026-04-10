@@ -1,0 +1,27 @@
+# Core Data Science Libraries
+numpy==1.26.4
+pandas==2.2.3
+scipy==1.14.1
+
+# Machine Learning
+scikit-learn==1.6.1
+xgboost==3.0.2
+imbalanced-learn==0.14.0
+optuna==4.3.0
+
+# Deep Learning (compatible versions)
+torch==2.5.1
+torchvision==0.20.1
+transformers==4.44.0
+
+# Visualization
+matplotlib==3.10.0
+seaborn==0.13.2
+
+# Utilities
+tqdm==4.67.1
+psutil==7.0.0
+joblib==1.4.2
+category_encoders
+flask
+flask-cors
